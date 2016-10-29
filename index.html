@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <body>
+<head>
+<title>Share test page</title>
+ </head>
+<body>
         
-        <h1> JavaScript</h1>
+ <h1> JavaScript</h1>
         
-        <p id="demo">
-        Test
-        </p>
+<p id="demo">
+Test
+</p>
         
-        <script>
-            function myFunction()
-            {
-                //amcfm_utils.showShare("Hele");
-                var json='{"type":"url","title":"懒人该如何理财?","message":"每月工资定享货币基金收益，真正实现懒人理财。","url":"https://m.chinaamc.com/activity/weixinFathersDay/index.html","image":"https://m.chinaamc.com/activity/weixinFathersDay/fathersDay.jpg"}';
+<script>
+	function myFunction()
+	{
+	    //amcfm_utils.showShare("Hele");
+	    var json='{"type":"url","title":"懒人该如何理财?","message":"每月工资定享货币基金收益，真正实现懒人理财。","url":"https://m.chinaamc.com/activity/weixinFathersDay/index.html","image":"https://m.chinaamc.com/activity/weixinFathersDay/fathersDay.jpg"}';
 
-                window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":json});
-            }
-        </script>
+	    window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":json});
+	}
+
+	function shouldBlockPop() 
+	{
+		return "yes";
+	}
+
+</script>
         
-        <button type="button" onclick="myFunction()">Click</button>
+<button type="button" onclick="myFunction()">Click</button>
         
-    </body>
+</body>
 </html>
