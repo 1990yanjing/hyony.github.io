@@ -12,7 +12,9 @@
             function myFunction()
             {
                 //amcfm_utils.showShare("Hele");
-                window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":"This is the message to share."});
+                var json='{"type":"url","title":"懒人该如何理财?","message":"每月工资定享货币基金收益，真正实现懒人理财。","url":"https://m.chinaamc.com/activity/weixinFathersDay/index.html","image":"https://m.chinaamc.com/activity/weixinFathersDay/fathersDay.jpg"}';
+
+                window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":json});
             }
         </script>
         
