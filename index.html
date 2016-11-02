@@ -301,7 +301,7 @@
 			{
 				if(str)
 				{
-					if(ua.indexOf('WKWebView')!=-1){
+					if(ua.indexOf('wkwebview')!=-1){
 						window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":json});
 					}else{
 						amcfm_utils.showShare(json);
