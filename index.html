@@ -306,8 +306,9 @@
 				if(str)
 				{
 					if(ua.indexOf('wkwebview')!=-1){
-						//window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":json});
-						window.webkit.messageHandlers.amcfm_utils.postMessage({"finish":"yes"});
+						window.webkit.messageHandlers.amcfm_utils.postMessage({"shouldShowShare":"yes","message":json});
+						//window.webkit.messageHandlers.amcfm_utils.postMessage({"finish":"yes"});
+						alert("test");
 					}else{
 						amcfm_utils.showShare(json);
 					}
