@@ -24,7 +24,7 @@
                 }
             }
 
-            function close() {
+            function closeClick() {
                 if (isWKWebView()) {
                     window.webkit.messageHandlers.amcfm_utils.postMessage({"finish":"yes"});
                 }
@@ -46,7 +46,7 @@
         
         <button type="button"  onclick="showShare()">showShare</button>
         <br>
-        <button type="button"  onclick="close()">close</button>
+        <button type="button"  onclick="closeClick()">close</button>
         <br>
         <a href="capture.html">Go to capture page</a>
 
