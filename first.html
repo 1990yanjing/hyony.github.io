@@ -32,6 +32,15 @@
                     amcfm_utils.finish();
                 }
             }
+            
+            function logClick() {
+                if (isWKWebView()) {
+                    window.webkit.messageHandlers.amcfm_utils.postMessage({"ucd":"ucd requested from web page"});
+                }
+                else {
+                    amcfm_utils.ucd("ucd requested from web page");
+                }
+            }
 
             function isWKWebView() {
                 var ua = navigator.userAgent;
@@ -47,6 +56,8 @@
         <button type="button"  onclick="showShare()">showShare</button>
         <br>
         <button type="button"  onclick="closeClick()">close</button>
+        <br>
+        <button type="button" onclick="logClick()">log</button>
         <br>
         <a href="capture.html">Go to capture page</a>
 
